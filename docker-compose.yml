@@ -1,17 +1,17 @@
 version: "3.5"
 services:
   flashpaper:
-    image: ghcr.io/andrewpaglusch/flashpaper:v2
+    image: github.com/murphy23x/flashpaper
     container_name: flashpaper
     restart: always
     volumes:
       - './data:/var/www/html/data'
     ports:
-      - '8080:80'
+      - '8080:8383'
     environment:
-      SITE_TITLE: "FlashPaper :: Self-Destructing Message"
+      SITE_TITLE: "Technica ICT :: Self-Destructing Message"
       RETURN_FULL_URL: "true"
-      BASE_URL: "" # https://mydomain.com/flashpaper
+      BASE_URL: "https://flashpaper.23x.nl" # https://mydomain.com/flashpaper
       MAX_SECRET_LENGTH: "3000"
       ANNOUNCEMENT: ""
       MESSAGES_ERROR_SECRET_TOO_LONG: "Input length too long"
